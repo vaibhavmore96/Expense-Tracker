@@ -1,0 +1,25 @@
+{% extends 'APP/basic.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+
+ <div class="container mt-4">
+    <h4> Register.....</h4>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <div class="form-row mt-2">
+            <div class="col-7">
+                 <input type="text" class="form-control" name="first_name" placeholder="Enter First Name">
+                 <input type="text" class="form-control" name="last_name" placeholder="Enter Last Name">
+                 <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                 <input type="text" class="form-control" name="username" placeholder="Enter User Name">
+                 <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                 <input type="password" class="form-control" name="password2" placeholder="Enter Confirm Password">
+                <br>
+                <input type="submit" value="Register" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'APP/basic.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h4> User Login.....</h4>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <div class="form-row mt-2">
+            <div class="col-7">
+                 <input type="text" class="form-control" name="first_name" placeholder="Enter First Name">
+                 <input type="password" class="form-control" name="Password" placeholder="Enter Password">
+                <br>
+                <input type="submit" value="Login" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
